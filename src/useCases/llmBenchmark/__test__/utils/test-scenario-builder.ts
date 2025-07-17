@@ -33,7 +33,10 @@ export class TestScenarioBuilder {
   }
 
   async whenBenchmarkIsExecuted(): Promise<TestScenario> {
-    const result = await llmBenchmarkUseCase({ agents: this.agents });
+    const result = await llmBenchmarkUseCase({ 
+      agents: this.agents,
+      openaiApiKey: 'test-api-key'
+    });
     return new TestScenario(this.agents, result);
   }
 

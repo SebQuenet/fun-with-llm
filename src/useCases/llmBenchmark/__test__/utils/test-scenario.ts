@@ -11,6 +11,9 @@ export class TestScenario {
   expectAgentsToBeInstantiated(): TestScenario {
     expect(this.agents.length).toBeGreaterThan(0);
     expect(this.result.totalAgents).toBe(this.agents.length);
+    expect(this.result.question).toBeDefined();
+    expect(this.result.responses).toBeDefined();
+    expect(this.result.leaderboard).toBeDefined();
     return this;
   }
 
