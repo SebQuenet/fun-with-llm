@@ -1,6 +1,6 @@
 import { expect } from "vitest";
 import { promptChainingUseCase } from "../prompt-chaining.usecase";
-import FakeOpenAICaller, { SECOND_ANSWER } from "./FaleOpenAICaller";
+import { FakeOpenAICaller, SECOND_ANSWER } from "./FakeOpenAICaller";
 
 export class TestScenarioBuilder {
   private openAICaller?: FakeOpenAICaller;
