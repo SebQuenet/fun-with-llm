@@ -1,6 +1,6 @@
 import { OpenAI } from 'openai';
 import dotenv from 'dotenv'
-import { promptChainingUseCase } from './prompt-chaining/prompt-chaining.usecase';
+import { promptChainingUseCase } from './useCases/prompt-chaining/prompt-chaining.usecase';
 import OpenAIImpl from './OpenAICaller/OpenAICallerImpl';
 
 dotenv.config()
