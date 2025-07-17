@@ -1,6 +1,6 @@
 import { describe, it } from 'vitest'
-import { TestScenarioBuilder } from './test-scenario-builder';
-import { EXPECTED_PROMPTS } from './test-data';
+import { TestScenarioBuilder } from './utils/test-scenario-builder';
+import { EXPECTED_PROMPTS } from './utils/test-data';
 
 describe('Prompt Chaining Use Case', () => {
   it('should pass the result of the first gpt call to the second one', async () => {
@@ -25,7 +25,7 @@ describe('Prompt Chaining Use Case', () => {
       .whenCentralFeatureIsRequested();
 
     scenario.expectFirstPromptContains(...EXPECTED_PROMPTS.FIRST_CONTAINS)
-            .expectSecondPromptContains(...EXPECTED_PROMPTS.SECOND_CONTAINS);
+      .expectSecondPromptContains(...EXPECTED_PROMPTS.SECOND_CONTAINS);
   });
 
   it('should properly chain prompts with dependency injection', async () => {

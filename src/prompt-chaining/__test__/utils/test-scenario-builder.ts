@@ -1,4 +1,4 @@
-import { promptChainingUseCase } from "../prompt-chaining.usecase";
+import { promptChainingUseCase } from "../../prompt-chaining.usecase";
 import FakeOpenAICaller from "./FakeOpenAICaller";
 import { TestScenario } from "./test-scenario";
 
