@@ -1,4 +1,4 @@
-import OpenAICaller from "../OpenAICaller/OpenAICaller";
+import OpenAICaller from "../../OpenAICaller/OpenAICaller";
 
 export const _promptChainingUseCase = async ({ openAICaller }: { openAICaller: OpenAICaller }, { prompt1, prompt2 }: { prompt1: string, prompt2: (response1: string) => string }) => {
   console.log('first call - asking for business idea');
