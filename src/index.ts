@@ -6,10 +6,7 @@ import OpenAIImpl from './OpenAICaller/OpenAICallerImpl';
 dotenv.config()
 
 const main = async () => {
-  const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-  })
-  const openAICaller = new OpenAIImpl(openai)
+  const openAICaller = new OpenAIImpl("gpt-4o-mini");
   await promptChainingUseCase({ openAICaller })
 }
 
