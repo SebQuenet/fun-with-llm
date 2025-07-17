@@ -10,8 +10,8 @@ describe('LLM Benchmark', () => {
       .whenBenchmarkIsExecuted();
 
     scenario.expectAgentsToBeInstantiated()
-            .expectSpecificNumberOfAgents(4)
-            .expectAgentProviders('OpenAI', 'Anthropic', 'Meta', 'Deepseek');
+      .expectSpecificNumberOfAgents(4)
+      .expectAgentProviders('OpenAI', 'Anthropic', 'Meta', 'Deepseek');
   });
 
   it('should instantiate two different LLM agents', async () => {
@@ -20,8 +20,8 @@ describe('LLM Benchmark', () => {
       .whenBenchmarkIsExecuted();
 
     scenario.expectAgentsToBeInstantiated()
-            .expectSpecificNumberOfAgents(2)
-            .expectAgentProviders('OpenAI', 'Anthropic');
+      .expectSpecificNumberOfAgents(2)
+      .expectAgentProviders('OpenAI', 'Anthropic');
   });
 
   it('should instantiate specific agents provided', async () => {
@@ -35,8 +35,8 @@ describe('LLM Benchmark', () => {
       .whenBenchmarkIsExecuted();
 
     scenario.expectAgentsToBeInstantiated()
-            .expectSpecificNumberOfAgents(2)
-            .expectAgentNames('OpenAI GPT-4', 'Claude 3.5 Sonnet');
+      .expectSpecificNumberOfAgents(2)
+      .expectAgentNames('OpenAI GPT-4', 'Claude 3.5 Sonnet');
   });
 
   it('should handle benchmark execution with agents', async () => {
@@ -44,6 +44,6 @@ describe('LLM Benchmark', () => {
       .executeStandardBenchmark();
 
     scenario.expectAgentsToBeInstantiated()
-            .expectSpecificNumberOfAgents(4);
+      .expectSpecificNumberOfAgents(4);
   });
 });
