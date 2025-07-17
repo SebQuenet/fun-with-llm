@@ -1,4 +1,4 @@
-import OpenAICaller from "./OpenAICaller/OpenAICaller";
+import OpenAICaller from "../OpenAICaller/OpenAICaller";
 
 export const promptChainingUseCase = async ({ openAICaller }: { openAICaller: OpenAICaller }) => {
   const prompt1 = `
